@@ -55,23 +55,19 @@
                       <div class="w-body-a">
                           <ul class="list-unstyled">
                               <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Home</a>
+                                  <i class="bi bi-chevron-right"></i> <a href="{{ url('/') }}">Home</a>
                               </li>
                               <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Abouts Us</a>
+                                  <i class="bi bi-chevron-right"></i> <a href="{{ url('about') }}">Abouts Us</a>
                               </li>
                               <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Blog</a>
+                                  <i class="bi bi-chevron-right"></i> <a href="{{ url('blog') }}">Blog</a>
                               </li>
+
                               <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Media</a>
-                              </li>
-                              <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Events</a>
-                              </li>
-                              <li class="item-list-a">
-                                  <i class="bi bi-chevron-right"></i> <a href="#">Contact Us</a>
-                              </li>
+                                <i class="bi bi-chevron-right"></i> <a href="{{ url('contact') }}">Contact</a>
+                            </li>
+                              
                           </ul>
                       </div>
                   </div>
@@ -132,15 +128,6 @@
                           &copy; Copyright
                           <span class="color-a">muzaffar&sons</span> All Rights Reserved.
                       </p>
-                  </div>
-                  <div class="credits">
-                      <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
-                      Designed by <a href="#">Shahraan Tech</a>
                   </div>
               </div>
           </div>

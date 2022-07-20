@@ -47,7 +47,8 @@
                     <div class="col-sm-12 section-t8">
                         <div class="row">
                             <div class="col-md-7">
-                                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                <form action="{{ url('contact-us') }}" method="POST" role="form" class="php-email-form1">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <div class="form-group">
@@ -63,11 +64,18 @@
                                                     placeholder="Your Email" required>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 mb-3">
+                                        <div class="col-md-6 mb-3">
                                             <div class="form-group">
                                                 <input type="text" name="subject"
                                                     class="form-control form-control-lg form-control-a"
                                                     placeholder="Subject" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="form-group">
+                                                <input type="text" name="phone"
+                                                    class="form-control form-control-lg form-control-a"
+                                                    placeholder="Phone" required>
                                             </div>
                                         </div>
                                         <div class="col-md-12">

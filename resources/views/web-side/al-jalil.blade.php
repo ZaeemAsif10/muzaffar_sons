@@ -63,6 +63,37 @@
             </div>
         </section>
 
+        <section class="crousel-section">
+            <div class="container">
+                <div class="row">
+                    <div class="title-single-box text-center mt-3">
+                        <h4 class="title-single fw-bold">Amenities & Facilities</h4>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+                        <div class="carousel-inner">
+                            @foreach ($detail_slider as $key => $detail_slid)
+                                <div class="carousel-item {{ $key == 0 ? ' active' : '' }}">
+                                    <img src="{{ asset('storage/app/public/uploads/detail-slider/' . $detail_slid->image) }}"
+                                        class="w-100 img-fluid caro" alt="">
+                                </div>
+                            @endforeach
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ======= Contact Single ======= -->
         <section class="contact">
             <div class="container">
@@ -76,7 +107,8 @@
                             <div id="map" class="contact-map">
                                 <iframe
                                     src="https://www.google.com/maps?q={{ $projects->latitude }},{{ $projects->longitud }}&hl=es;z=1&output=embed"
-                                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    width="100%" height="450" frameborder="0" style="border:0"
+                                    allowfullscreen></iframe>
                             </div>
                         </div>
                     </div>
@@ -114,7 +146,7 @@
                                             <strong>Email:</strong>
                                             <span class="color-text-a">annabella@example.com</span>
                                         </li>
-                                        
+
                                     </ul>
                                     <div class="socials-a mt-5">
                                         <ul class="list-inline">
@@ -144,26 +176,35 @@
                             </div>
                             <div class="col-md-12 col-lg-4">
                                 <div class="property-contact">
-                                    <form class="form-a">
+                                    <form action="{{ url('booking-detail') }}" method="POST" class="form-a">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-12 mb-1">
                                                 <div class="form-group">
                                                     <input type="text"
-                                                        class="form-control form-control-lg form-control-a" id="inputName"
+                                                        class="form-control form-control-lg form-control-a" name="name" id="inputName"
                                                         placeholder="Name *" required="">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-1">
                                                 <div class="form-group">
-                                                    <input type="email"
-                                                        class="form-control form-control-lg form-control-a" id="inputEmail1"
-                                                        placeholder="Email *" required="">
+                                                    <input type="email" name="email"
+                                                        class="form-control form-control-lg form-control-a"
+                                                        id="inputEmail1" placeholder="Email *" required="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12 mb-1">
+                                                <div class="form-group">
+                                                    <input type="number" name="phone"
+                                                        class="form-control form-control-lg form-control-a"
+                                                        id="inputEmail" placeholder="Phone *" required="">
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mb-1">
                                                 <div class="form-group">
-                                                    <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="45"
-                                                        rows="8" required=""></textarea>
+                                                    <textarea id="textMessage" class="form-control" placeholder="Comment *" name="message" cols="10"
+                                                        rows="5" required=""></textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-12 mt-3">

@@ -1,6 +1,5 @@
 @extends('web-side.setup.master')
 @section('content')
-
     <main id="main">
         <!-- ======= Intro Single ======= -->
         <section class="intro-single">
@@ -74,6 +73,42 @@
                         </div>
                     </div>
                 </div>
+
+
+                <section class="allBox">
+                    <div class="row mt-3">
+                        <div class="col-md-4">
+                            <div class="box text-center mt-3">
+                                
+                                <h5 class="mt-4 state">REAL ESTATE <br> CONSULTANCY</h5>
+                                <p class="mt-4 help">Our experienced team of investment consultants helps to you enhance your
+                                    decision making
+                                    perspective by
+                                    providing authentic information, so that you make the right investment decision.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box1 text-center mt-3">
+                                <h5 class="mt-4 state">REAL ESTATE <br> MANAGEMENT</h5>
+                                <p class="mt-4 help">The A Team is experienced in managing multi-million real estate
+                                    properties for its
+                                    national and international clients.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box2 text-center mt-3">
+                                <h5 class="mt-4 state">REAL ESTATE <br> DEVELOPMENT</h5>
+                                <p class="mt-4 help">The A Team has planned strategic partnerships and collaborations to
+                                    bring its
+                                    investors with exclusive opportunities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
         </section>
     </main>

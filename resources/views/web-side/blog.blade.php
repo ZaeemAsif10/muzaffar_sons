@@ -12,8 +12,6 @@
                 </div>
             @endforeach
         </div>
-
-        <div class="swiper-pagination"></div>
     </div><!-- End Intro Section -->
 
     <main id="main">

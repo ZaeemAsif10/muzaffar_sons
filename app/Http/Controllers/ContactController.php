@@ -25,7 +25,7 @@ class ContactController extends Controller
 
         $data = [
             'name' => $request->name,
-            'email' => 'info@theateam.pk',
+            'email' => $request->email,
             'phone' => $request->phone,
             'subject' => $request->subject,
             'message' => $request->message,
@@ -39,7 +39,7 @@ class ContactController extends Controller
         $res = Contact::create($data);
         if($res)
         {
-            return back();
+            return redirect('contact');
         }
         else
         {
@@ -118,7 +118,7 @@ class ContactController extends Controller
 
         $data = [
             'name' => $request->name,
-            'email' => 'info@theateam.pk',
+            'email' => $request->email,
             'phone' => $request->phone,
             'interest' => $request->interest,
         ];
@@ -151,7 +151,7 @@ class ContactController extends Controller
 
         $data = [
             'name' => $request->name,
-            'email' => 'info@theateam.pk',
+            'email' => $request->email,
             'phone' => $request->phone,
             'message' => $request->message,
         ];

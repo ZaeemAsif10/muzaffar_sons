@@ -22,13 +22,9 @@
                     <div class="col-md-12">
                         <div class="title-wrap d-flex justify-content-between">
                             <div class="title-box">
-                                <h2 class="title-a">Latest News</h2>
+                                <h2 class="title-a fw-bold">Latest News</h2>
                             </div>
-                            <div class="title-link">
-                                <a href="blog-grid.html">All News
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -62,10 +58,9 @@
                         <!-- End carousel item -->
                     </div>
                 </div>
-
-                <div class="news-carousel-pagination carousel-pagination"></div>
             </div>
-        </section><!-- End Latest News Section -->
+        </section>
+        <!-- End Latest News Section -->
 
         <!-- ======= Latest Properties Section ======= -->
         <section class="section-property section-t8">
@@ -74,12 +69,7 @@
                     <div class="col-md-12">
                         <div class="title-wrap d-flex justify-content-between">
                             <div class="title-box">
-                                <h2 class="title-a">BLOG POST</h2>
-                            </div>
-                            <div class="title-link">
-                                <a href="property-grid.html">All Property
-                                    <span class="bi bi-chevron-right"></span>
-                                </a>
+                                <h2 class="title-a fw-bold">BLOG POST</h2>
                             </div>
                         </div>
                     </div>
@@ -117,7 +107,16 @@
                 <div class="propery-carousel-pagination carousel-pagination"></div>
 
             </div>
-        </section><!-- End Latest Properties Section -->
+        </section>
+        <!-- End Latest Properties Section -->
+
+
+        <div class="sixth mb-3 mt-5">
+            <div class="mb-5 text-center">
+                <h1 class="font-weight-bold noor text-white">NEARBY PLACES</h1>
+                <img src="public/assets/images/Near-Places-1024x683-1.jpg" class="img-fluid near" alt="">
+            </div>
+        </div>
 
     </main><!-- End #main -->
 @endsection
