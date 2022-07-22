@@ -1,18 +1,17 @@
 @extends('web-side.setup.master')
 @section('content')
     <!-- ======= Intro Section ======= -->
-    <div class="intro intro-carousel swiper position-relative">
-
-        <div class="swiper-wrapper">
-
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
             @foreach ($blog_slider as $key => $blog_slid)
-                <div class="swiper-slide carousel-item-a intro-item bg-image"
-                    style="background-image: url({{ asset('storage/app/public/uploads/blogs/sider/' . $blog_slid->image) }})">
-                    <div class="overlay overlay-a"></div>
+                <div class="carousel-item {{ $key == 0 ? ' active' : '' }}">
+                    <img src="{{ asset('storage/app/public/uploads/blogs/sider/' . $blog_slid->image) }}" class="w-100 img-fluid"
+                        alt="">
                 </div>
             @endforeach
         </div>
-    </div><!-- End Intro Section -->
+    </div>
+    <!-- End Intro Section -->
 
     <main id="main">
 

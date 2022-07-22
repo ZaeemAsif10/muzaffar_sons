@@ -1,20 +1,15 @@
 @extends('web-side.setup.master')
 @section('content')
-
     <!-- ======= Intro Section ======= -->
-    <div class="intro intro-carousel swiper position-relative">
-
-        <div class="swiper-wrapper">
-
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
             @foreach ($event_slider as $key => $event)
-                <div class="swiper-slide carousel-item-a intro-item bg-image"
-                    style="background-image: url({{ asset('storage/app/public/uploads/events/slider/' . $event->image) }})">
-                    <div class="overlay overlay-a"></div>
+                <div class="carousel-item {{ $key == 0 ? ' active' : '' }}">
+                    <img src="{{ asset('storage/app/public/uploads/events/slider/' . $event->image) }}"
+                        class="w-100 img-fluid" alt="">
                 </div>
             @endforeach
         </div>
-
-        <div class="swiper-pagination"></div>
     </div>
     <!-- End Intro Section -->
 
@@ -49,13 +44,14 @@
             <div class="container">
                 <div class="row">
                     @foreach ($annual_events as $annual_event)
-                    <div class="col-md-4">
-                        <div class="card-box-a card-shadow">
-                          <div class="img-box-a">
-                            <img src="{{ asset('storage/app/public/uploads/annual_events/' . $annual_event->images) }}" alt="" class="img-a img-fluid">
-                          </div>
+                        <div class="col-md-4">
+                            <div class="card-box-a card-shadow">
+                                <div class="img-box-a">
+                                    <img src="{{ asset('storage/app/public/uploads/annual_events/' . $annual_event->images) }}"
+                                        alt="" class="img-a img-fluid">
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     @endforeach
                 </div>
 
